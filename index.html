@@ -205,7 +205,7 @@
 
     footer{
       text-align:center;
-      padding:40px 0;
+      padding:10px 0;
       color:#64748b;
       font-size:14px;
     }
@@ -303,6 +303,35 @@
     margin-bottom:8px;
 }
 
+.education-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.education-score{
+    background:#e0f2fe;
+    color:#0369a1;
+    padding:8px 14px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.social-link{
+    color:#e0f2fe;
+    text-decoration:none;
+    transition:all 0.3s ease;
+    font-weight:500;
+}
+
+.social-link:hover{
+    color:#14b8a6;
+    text-decoration:underline;
+}
+
 .volunteer-content p{
     font-size:16px;
     color:#4b5563;
@@ -365,10 +394,7 @@
         </div>
 
         <p class="summary">
-          iOS Developer with 6+ years of experience building enterprise iOS applications,
-          real-time workflows, QA automation systems, and CI/CD-driven release pipelines
-          at Comcast India Engineering Center, contributing to applications serving
-          30+ million users.
+          iOS Developer with 6+ years of experience building enterprise-scale iOS applications, real-time communication systems, QA automation solutions, and CI/CD-driven release pipelines through AppStore and TestFlight at Comcast India Engineering Center, contributing to applications serving 30+ million users.
         </p>
 
       </div>
@@ -386,11 +412,15 @@
           </div>
 
           <div class="contact-item">
-            🔗 linkedin.com/in/lokeshnagarajan
+            <a href="https://linkedin.com/in/lokeshnagarajan" target="_blank" class="social-link">
+              🔗 linkedin.com/in/lokeshnagarajan
+            </a>
           </div>
 
           <div class="contact-item">
-            💻 github.com/lokesh-nagarajan
+             <a href="https://github.com/lokesh-nagarajan" target="_blank" class="social-link">
+                💻 github.com/lokesh-nagarajan
+              </a>
           </div>
 
         </div>
@@ -411,7 +441,7 @@
 
             <h3>Engineer 3 - Software Development & Engineering</h3>
             <div class="company">Comcast India Engineering Center, Chennai, India</div>
-            <div class="date">Oct 2025 — Present</div>
+            <div class="date">Oct 2025 - Present</div>
 
             <ul>
               <li>Engineered an end-to-end push notification workflow using APNs, FCM, and Remote Config, enabling real-time alerts across all application states with in-app notification history support.</li>
@@ -425,20 +455,20 @@
 
             <h3>Engineer 2 - Product Development & Engineering</h3>
             <div class="company">Comcast India Engineering Center, Chennai, India</div>
-            <div class="date">Apr 2022 — Sep 2025</div>
+            <div class="date">Apr 2022 - Sep 2025</div>
 
             <ul>
-              <li>Developed a serial communication workflow for the RCMP iOS application using the Redpark framework, enabling reliable command execution and real-time device response handling over physical serial connectivity.</li>
+              <li>Developed a serial communication framework for the RCMP iOS application using the Redpark SDK, enabling reliable command execution and real-time device response handling over physical serial connectivity.</li>
 
-              <li>Built a dynamic SwiftUI-based control bar that reactively rendered and reordered contextual status indicators using Combine and WebSocket-driven workflows.</li>
+              <li>Built a dynamic SwiftUI-based control bar for XMF iOS application that reactively renders and reorders contextual status indicators using Combine and WebSocket-driven workflows.</li>
 
-              <li>Integrated Firebase Crashlytics and usage analytics into Yeti and XMF iOS applications.</li>
+              <li>Integrated Firebase Crashlytics and usage analytics across Yeti and XMF iOS applications, improving application monitoring and operational visibility.</li>
 
-              <li>Built a centralized Firebase Analytics tracking framework for reusable screen analytics across applications.</li>
+              <li>Designed and implemented a centralized Firebase Analytics tracking framework to standardize reusable screen-level analytics across multiple iOS applications.</li>
 
-              <li>Led the UI revamp for the RPHY Scanner iOS application by translating Figma designs into a modern visual experience.</li>
+              <li>Led the UI modernization initiative for the RPHY Scanner iOS application by translating Figma designs into a consistent & modern visual experience.</li>
 
-              <li>Completed end-to-end setup and firmware recovery workflows for XMF-H/XMF-HD handheld optical network meters.</li>
+              <li>Completed end-to-end setup, firmware recovery, and network provisioning of XMF-H/XMF-HD optical network meters by performing shell-based device recovery, firmware reflashing, LuCI network configuration, and Comcast bridge-mode connectivity enablement to achieve stable 24x7 operational availability.</li>
             </ul>
 
           </div>
@@ -447,7 +477,7 @@
 
             <h3>Development Engineer 1</h3>
             <div class="company">Comcast India Engineering Center, Chennai, India</div>
-            <div class="date">Jul 2020 — Mar 2022</div>
+            <div class="date">Jul 2020 - Mar 2022</div>
 
             <ul>
               <li>Developed a mobile automation framework using Appium, Java, Cucumber, and WebDriverAgent.</li>
@@ -461,7 +491,7 @@
 
             <h3>Internship Trainee</h3>
             <div class="company">Comcast India Engineering Center, Chennai, India</div>
-            <div class="date">Jan 2020 — Jun 2020</div>
+            <div class="date">Jan 2020 - Jun 2020</div>
             Every engineer has a place that shapes their journey. Comcast was mine. It laid the foundation of my engineering career by instilling product ownership, proactive problem-solving, collaboration, and strong communication within enterprise-scale development environments.
             <ul>
               <li>Started as an Internship Trainee, contributing to development and QA workflows while learning enterprise engineering practices through mentorship and cross-functional collaboration.</li>
@@ -528,31 +558,69 @@
         </div>
 
         <div class="card">
-            <h2 class="section-title">Education</h2>
 
-            <div class="section-line"></div>
+    <h2 class="section-title">Education</h2>
 
-            <div class="education-item">
+    <div class="section-line"></div>
 
-              <h3>M.Tech in Software Engineering</h3>
-              <h4>Birla Institute of Technology and Science, Pilani, India</h4>
-              <p>2022 — 2024</p>
+    <div class="education-item">
 
+        <div class="education-top">
+
+            <div>
+                <h3>M.Tech in Software Engineering</h3>
+                <h4>Birla Institute of Technology and Science, Pilani, India</h4>
             </div>
 
-          <div class="education-item">
-            <h3>B.E in Computer Science</h3>
-            <h4>Mepco Schlenk Engineering College, Sivakasi, India</h4>
-            <p>2016 — 2020</p>
-          </div>
-
-          <div class="education-item">
-            <h3>Higher Secondary Education</h3>
-            <h4>CEOA Matriculation Higher Secondary School</h4>
-            <p>2015- 2016</p>
-          </div>
+            <div class="education-score">
+                7.65 / 10
+            </div>
 
         </div>
+
+        <p>2022 - 2024</p>
+
+    </div>
+
+    <div class="education-item">
+
+        <div class="education-top">
+
+            <div>
+                <h3>B.E in Computer Science Engineering</h3>
+                <h4>Mepco Schlenk Engineering College, Sivakasi, India</h4>
+            </div>
+
+            <div class="education-score">
+                7.64 / 10
+            </div>
+
+        </div>
+
+        <p>2016 - 2020</p>
+
+    </div>
+
+    <div class="education-item">
+
+        <div class="education-top">
+
+            <div>
+                <h3>Higher Secondary Education</h3>
+                <h4>CEOA Matriculation Higher Secondary School</h4>
+            </div>
+
+            <div class="education-score">
+                93.3%
+            </div>
+
+        </div>
+
+        <p>2015 - 2016</p>
+
+    </div>
+
+</div>
 
         <div class="card">
 
@@ -597,7 +665,6 @@
         </div>
       </div>
     </section>
-
     <footer>
       Built with ❤️ by Lokesh Nagarajan
     </footer>
