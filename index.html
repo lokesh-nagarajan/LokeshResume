@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lokesh Nagarajan | Senior iOS Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#f4f7fb;
+      color:#1e293b;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:100%;
+      max-width:1200px;
+      margin:auto;
+      padding:40px 24px;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#07142a,#0d1f3f,#0f2b59);
+      color:white;
+      border-radius:24px;
+      padding:48px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:48px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .hero-left{
+      flex:1;
+    }
+
+    .hero-right{
+      width:320px;
+      padding-top:12px;
+    }
+
+    .profile{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .profile img{
+      width:170px;
+      height:170px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid #14b8a6;
+      flex-shrink:0;
+    }
+
+    .profile-info{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    h1{
+      font-size:65px;
+      line-height:0.95;
+      font-weight:600;
+      margin-bottom:15px;
+      letter-spacing:-2px;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:left;
+      /* background:#14b8a6; */
+      color:#14b8a6;
+      /* padding: 22px; */
+      border-radius:14px;
+      font-size:18px;
+      font-weight:700;
+      width:fit-content;
+    }
+
+    .summary{
+      margin-top:24px;
+      max-width:820px;
+      color:#dbeafe;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .contact{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+      margin-top:16px;
+    }
+
+    .contact-item{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      color:#e2e8f0;
+      font-size:17px;
+      font-weight:500;
+      white-space:nowrap;
+    }
+
+    .section{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:20px;
+      padding:25px;
+      box-shadow:0 8px 30px rgba(15,23,42,0.06);
+      margin-bottom: 10px;
+    }
+
+    .section-title{
+      font-size:28px;
+      margin-bottom:10px;
+      color:#0f172a;
+      font-weight:700;
+    }
+
+    .experience{
+      margin-bottom:10px;
+    }
+
+    .experience h3{
+      font-size:22px;
+      color:#0f172a;
+    }
+
+    .company{
+      color:#14b8a6;
+      font-weight:600;
+      margin-bottom:4px;
+    }
+
+    .date{
+      color:#14b8a6;
+      font-size:14px;
+      margin-bottom:8px;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    li{
+      margin-bottom:10px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .skill{
+      background:#e2e8f0;
+      padding:10px 16px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:500;
+    }
+
+    .award{
+      margin-bottom:5px;
+      padding-bottom:5px;
+      border-bottom:1px solid #e2e8f0;
+    }
+    
+    .award h2{
+      font-size:20px;
+      font-weight:800;
+      color:#111827;
+      margin-bottom:2px;
+    }
+
+    .award:last-child{
+      border:none;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 0;
+      color:#64748b;
+      font-size:14px;
+    }
+
+    .education-section{
+    padding:40px;
+}
+
+.section-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    /* margin-bottom:18px; */
+}
+
+.section-icon{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#14b8a6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    color:white;
+}
+
+.section-header h2{
+    font-size:20px;
+    letter-spacing:4px;
+    font-weight:800;
+    color:#0f172a;
+}
+
+.section-line{
+    height:4px;
+    width:100%;
+    background:#14b8a6;
+    margin-bottom:20px;
+}
+
+.education-item{
+    margin-bottom:10px;
+}
+
+.education-item h3{
+    font-size:20px;
+    font-weight:800;
+    color:#111827;
+    margin-bottom:2px;
+}
+
+.education-item h4{
+    font-size:16px;
+    font-weight:400;
+    color:#4b5563;
+    margin-bottom:2px;
+}
+
+.education-item p{
+    font-size:16px;
+    color:#14b8a6;
+    font-weight:500;
+}
+
+.language-item h3 {
+  font-size:14px;
+  color:#14b8a6;
+  font-weight:500;
+}
+
+.language-item h2 {
+  font-size:20px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+.volunteer-item{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    margin-top:24px;
+}
+
+.volunteer-item img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+.volunteer-content h3{
+    font-size:22px;
+    font-weight:600;
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.volunteer-content p{
+    font-size:16px;
+    color:#4b5563;
+    line-height:1.6;
+    padding-bottom:15px;
+    border-bottom:1px solid #e2e8f0;
+    margin-bottom:2px;
+}
+
+    @media(max-width:900px){
+
+    .hero{
+      grid-template-columns:1fr;
+      padding:32px;
+    }
+
+    .section{
+      grid-template-columns:1fr;
+    }
+
+    .profile{
+      flex-direction:column;
+      align-items:flex-start;
+    }
+
+    h1{
+      font-size:42px;
+    }
+
+    .tag{
+      width:100%;
+      font-size:12px;
+    }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <section class="hero">
+
+      <div class="hero-left">
+
+        <div class="profile">
+
+          <img src="profile.jpg" alt="Lokesh Nagarajan">
+
+          <div class="profile-info">
+
+            <h1>Lokesh Nagarajan</h1>
+            <div class="tag">
+              iOS Developer | SwiftUI • UIKit • Google Firebase Analytics • QA Automation
+            </div>
+
+          </div>
+
+        </div>
+
+        <p class="summary">
+          iOS Developer with 6+ years of experience building enterprise iOS applications,
+          real-time workflows, QA automation systems, and CI/CD-driven release pipelines
+          at Comcast India Engineering Center, contributing to applications serving
+          30+ million users.
+        </p>
+
+      </div>
+
+      <div class="hero-right">
+
+        <div class="contact">
+
+          <div class="contact-item">
+            📧 lokeshnagarajan10@gmail.com
+          </div>
+
+          <div class="contact-item">
+            📍 Chennai, Tamil Nadu, India
+          </div>
+
+          <div class="contact-item">
+            🔗 linkedin.com/in/lokeshnagarajan
+          </div>
+
+          <div class="contact-item">
+            💻 github.com/lokesh-nagarajan
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <div>
+
+        <div class="card">
+
+          <h2 class="section-title">Professional Experience</h2>
+
+          <div class="experience">
+
+            <h3>Engineer 3 - Software Development & Engineering</h3>
+            <div class="company">Comcast India Engineering Center, Chennai, India</div>
+            <div class="date">Oct 2025 — Present</div>
+
+            <ul>
+              <li>Engineered an end-to-end push notification workflow using APNs, FCM, and Remote Config, enabling real-time alerts across all application states with in-app notification history support.</li>
+
+              <li>Built a real-time RF/network node monitoring iOS application featuring live spectrum visualization and WebSocket-driven communication workflows.</li>
+            </ul>
+
+          </div>
+
+          <div class="experience">
+
+            <h3>Engineer 2 - Product Development & Engineering</h3>
+            <div class="company">Comcast India Engineering Center, Chennai, India</div>
+            <div class="date">Apr 2022 — Sep 2025</div>
+
+            <ul>
+              <li>Developed a serial communication workflow for the RCMP iOS application using the Redpark framework, enabling reliable command execution and real-time device response handling over physical serial connectivity.</li>
+
+              <li>Built a dynamic SwiftUI-based control bar that reactively rendered and reordered contextual status indicators using Combine and WebSocket-driven workflows.</li>
+
+              <li>Integrated Firebase Crashlytics and usage analytics into Yeti and XMF iOS applications.</li>
+
+              <li>Built a centralized Firebase Analytics tracking framework for reusable screen analytics across applications.</li>
+
+              <li>Led the UI revamp for the RPHY Scanner iOS application by translating Figma designs into a modern visual experience.</li>
+
+              <li>Completed end-to-end setup and firmware recovery workflows for XMF-H/XMF-HD handheld optical network meters.</li>
+            </ul>
+
+          </div>
+
+          <div class="experience">
+
+            <h3>Development Engineer 1</h3>
+            <div class="company">Comcast India Engineering Center, Chennai, India</div>
+            <div class="date">Jul 2020 — Mar 2022</div>
+
+            <ul>
+              <li>Developed a mobile automation framework using Appium, Java, Cucumber, and WebDriverAgent.</li>
+
+              <li>Integrated Slack notifications into the CI/CD workflow for automated TestFlight release updates.</li>
+            </ul>
+
+          </div>
+
+          <div class="experience">
+
+            <h3>Internship Trainee</h3>
+            <div class="company">Comcast India Engineering Center, Chennai, India</div>
+            <div class="date">Jan 2020 — Jun 2020</div>
+            Every engineer has a place that shapes their journey. Comcast was mine. It laid the foundation of my engineering career by instilling product ownership, proactive problem-solving, collaboration, and strong communication within enterprise-scale development environments.
+            <ul>
+              <li>Started as an Internship Trainee, contributing to development and QA workflows while learning enterprise engineering practices through mentorship and cross-functional collaboration.</li>
+              <li>Performed API testing and Web UI automation as part of application quality assurance and validation processes.</li>
+            </ul>
+
+          </div>
+
+        </div>
+        
+        <div class="card">
+
+    <h2 class="section-title">Volunteering</h2>
+
+    <div class="section-line"></div>
+
+    <div class="volunteer-item">
+        <img src="NSS-symbol.jpeg" alt="NSS Logo">
+        <div class="volunteer-content">
+            <h3>National Service Scheme</h3>
+            <p>
+              Mentored 6th and 7th grade students in Mathematics and English at Government Matriculation School, Sivakasi.
+            </p>
+        </div>
+    </div>
+
+    <div class="volunteer-item">
+        <img src="Comcast-logo.png" alt="Comcast logo">
+        <div class="volunteer-content">
+            <h3>Comcast Cares</h3>
+            <p>
+              Contributed to classroom improvement activities at Government Higher Secondary School, Sholinganallur, Chennai including blackboard painting and basic infrastructure support.
+            </p>
+        </div>
+    </div>
+    </div>
+      </div>
+
+      <div>
+
+        <div class="card">
+
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-line"></div>
+
+          <div class="skills">
+
+            <div class="skill">Swift</div>
+            <div class="skill">SwiftUI</div>
+            <div class="skill">Firebase</div>
+            <div class="skill">GA4 Analytics</div>
+            <div class="skill">Combine</div>
+            <div class="skill">WebSockets</div>
+            <div class="skill">CI/CD</div>
+            <div class="skill">Java</div>
+            <div class="skill">QA</div>
+            <div class="skill">Appium</div>
+            <div class="skill">APNs</div>
+            <div class="skill">FCM</div>
+            <div class="skill">Xcode</div>
+            <div class="skill">Git</div>
+          </div>
+
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Education</h2>
+
+            <div class="section-line"></div>
+
+            <div class="education-item">
+
+              <h3>M.Tech in Software Engineering</h3>
+              <h4>Birla Institute of Technology and Science, Pilani, India</h4>
+              <p>2022 — 2024</p>
+
+            </div>
+
+          <div class="education-item">
+            <h3>B.E in Computer Science</h3>
+            <h4>Mepco Schlenk Engineering College, Sivakasi, India</h4>
+            <p>2016 — 2020</p>
+          </div>
+
+          <div class="education-item">
+            <h3>Higher Secondary Education</h3>
+            <h4>CEOA Matriculation Higher Secondary School</h4>
+            <p>2015- 2016</p>
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <h2 class="section-title">Awards</h2>
+          <div class="section-line"></div>
+
+          <div class="award">
+            <h2>🏅 CHAMP Award<br></h2>
+            Recognized for architecting and delivering a robust end-to-end automation framework for the RPHY Scanner iOS App.
+          </div>
+
+          <div class="award">
+            <h2>🏆 CHAMP Award<br></h2>
+            Honoured for leading the strategic UI modernization of the RPHY Scanner iOS App.
+          </div>
+
+          <div class="award">
+            <h2>🙏 HIGH FIVE Award<br></h2>
+            Awarded for enhancing user experience in the YETI application through proactive collaboration and solution design.
+          </div>
+
+          <div class="award">
+            <h2>📌 You Nailed It Program<br></h2>
+            Awarded for contributions towards setting up and configuring XMF-H meters in the lab.
+          </div>
+
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Languages</h2>
+            <div class="section-line"></div>
+        
+            <div class="language-item">
+              <h2>English&emsp;&emsp;&emsp;</h2>
+              <h3>Professional Proficiency</h3>
+            </div>
+
+            <div class="language-item">
+              <h2>Tamil&emsp;&emsp;&emsp;</h2>
+              <h3>Native or Bilingual proficiency</h3>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Built with ❤️ by Lokesh Nagarajan
+    </footer>
+
+  </div>
+
+</body>
+</html>
