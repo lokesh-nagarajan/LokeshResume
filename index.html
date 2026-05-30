@@ -341,6 +341,42 @@
     margin-bottom:2px;
 }
 
+.pdf-mode {
+    max-width: 850px;
+}
+
+.pdf-mode .hero {
+    padding: 32px;
+}
+
+.hero-actions{
+    margin-top:24px;
+}
+
+.resume-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#14b8a6;
+    color:white;
+    padding:14px 24px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    text-decoration:none;
+    transition:all 0.3s ease;
+}
+
+.resume-btn:hover{
+    background:#0f766e;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(20,184,166,0.3);
+}
+
+.pdf-mode .hero-right {
+    width: 260px;
+}
+
     @media(max-width:900px){
 
     .hero{
@@ -423,6 +459,11 @@
               </a>
           </div>
 
+          <div class="hero-actions">
+          <a href="Lokesh_Nagarajan.pdf" download="Lokesh_Nagarajan.pdf" class="resume-btn">
+            📄 Download Resume
+          </a>
+        </div>
         </div>
 
       </div>
